@@ -4,6 +4,9 @@
   "private": true,
   "description": "",
   "scripts": {
+    "lint:style": "prettier-stylelint --write -q 'src/**/*.{css,scss,less}' ",
+    "lint:fix": "eslint --fix --ext .js src && npm run lint:style",
+    "lint": "eslint --ext .js src && npm run lint:style",
     "build:weapp:stage": "SERVICECONFIG=stage npm run build:weapp",
     "build:weapp:dev": "SERVICECONFIG=dev npm run build:weapp",
     "build:weapp": "taro build --type weapp",
@@ -70,7 +73,10 @@
     "eslint": "^4.19.1",
     "eslint-config-taro": "1.2.15",
     "eslint-plugin-import": "^2.12.0",
+    "eslint-plugin-prettier": "^3.0.1",
     "eslint-plugin-react": "^7.8.2",
-    "eslint-plugin-taro": "1.2.15"
+    "eslint-plugin-taro": "1.2.15",
+    "prettier": "^1.16.4",
+    "stylelint-config-standard": "^18.2.0"
   }
 }

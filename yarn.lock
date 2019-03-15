@@ -2406,6 +2406,13 @@ eslint-plugin-import@^2.12.0:
     read-pkg-up "^2.0.0"
     resolve "^1.9.0"
 
+eslint-plugin-prettier@^3.0.1:
+  version "3.0.1"
+  resolved "http://registry.npm.taobao.org/eslint-plugin-prettier/download/eslint-plugin-prettier-3.0.1.tgz#19d521e3981f69dd6d14f64aec8c6a6ac6eb0b0d"
+  integrity sha1-GdUh45gfad1tFPZK7IxqasbrCw0=
+  dependencies:
+    prettier-linter-helpers "^1.0.0"
+
 eslint-plugin-react@^7.8.2:
   version "7.12.4"
   resolved "http://registry.npm.taobao.org/eslint-plugin-react/download/eslint-plugin-react-7.12.4.tgz#b1ecf26479d61aee650da612e425c53a99f48c8c"
@@ -2665,6 +2672,11 @@ fast-deep-equal@^1.0.0:
 fast-deep-equal@^2.0.1:
   version "2.0.1"
   resolved "http://registry.npm.taobao.org/fast-deep-equal/download/fast-deep-equal-2.0.1.tgz#7b05218ddf9667bf7f370bf7fdb2cb15fdd0aa49"
+
+fast-diff@^1.1.2:
+  version "1.2.0"
+  resolved "http://registry.npm.taobao.org/fast-diff/download/fast-diff-1.2.0.tgz#73ee11982d86caaf7959828d519cfe927fac5f03"
+  integrity sha1-c+4RmC2Gyq95WYKNUZz+kn+sXwM=
 
 fast-json-stable-stringify@^2.0.0:
   version "2.0.0"
@@ -4889,6 +4901,18 @@ prelude-ls@~1.1.2:
   version "1.1.2"
   resolved "http://registry.npm.taobao.org/prelude-ls/download/prelude-ls-1.1.2.tgz#21932a549f5e52ffd9a827f570e04be62a97da54"
 
+prettier-linter-helpers@^1.0.0:
+  version "1.0.0"
+  resolved "http://registry.npm.taobao.org/prettier-linter-helpers/download/prettier-linter-helpers-1.0.0.tgz#d23d41fe1375646de2d0104d3454a3008802cf7b"
+  integrity sha1-0j1B/hN1ZG3i0BBNNFSjAIgCz3s=
+  dependencies:
+    fast-diff "^1.1.2"
+
+prettier@^1.16.4:
+  version "1.16.4"
+  resolved "http://registry.npm.taobao.org/prettier/download/prettier-1.16.4.tgz#73e37e73e018ad2db9c76742e2647e21790c9717"
+  integrity sha1-c+N+c+AYrS25x2dC4mR+IXkMlxc=
+
 pretty-error@^2.0.2:
   version "2.1.1"
   resolved "http://registry.npm.taobao.org/pretty-error/download/pretty-error-2.1.1.tgz#5f4f87c8f91e5ae3f3ba87ab4cf5e03b1a17f1a3"
@@ -5902,6 +5926,18 @@ style-loader@0.21.0:
   dependencies:
     loader-utils "^1.1.0"
     schema-utils "^0.4.5"
+
+stylelint-config-recommended@^2.1.0:
+  version "2.1.0"
+  resolved "http://registry.npm.taobao.org/stylelint-config-recommended/download/stylelint-config-recommended-2.1.0.tgz#f526d5c771c6811186d9eaedbed02195fee30858"
+  integrity sha1-9SbVx3HGgRGG2ertvtAhlf7jCFg=
+
+stylelint-config-standard@^18.2.0:
+  version "18.2.0"
+  resolved "http://registry.npm.taobao.org/stylelint-config-standard/download/stylelint-config-standard-18.2.0.tgz#6283149aba7f64f18731aef8f0abfb35cf619e06"
+  integrity sha1-YoMUmrp/ZPGHMa748Kv7Nc9hngY=
+  dependencies:
+    stylelint-config-recommended "^2.1.0"
 
 stylus-loader@3.0.2:
   version "3.0.2"

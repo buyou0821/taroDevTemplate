@@ -6,6 +6,7 @@
     "no-shadow": "off",
     "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx", ".tsx"] }],
     "no-unused-vars": ["error", { "varsIgnorePattern": "Taro" }],
+    "prefer-const": 2,
     "prettier/prettier": [
       "error",
       {

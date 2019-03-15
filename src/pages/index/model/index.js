@@ -8,12 +8,12 @@ export default {
     global: false,
   },
   effects:{
-    * getList({payload}, {all, call, put}){
+    * getList({}, {call, put}){
 
       Taro.showLoading({
         title: '加载中。。。'
       })
-      const { statusCode, data } = yield call(getOrderList);
+      const { data } = yield call(getOrderList);
       const {list}=data;
 
       // console.log("model", list);

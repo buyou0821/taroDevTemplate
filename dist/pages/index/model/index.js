@@ -14,6 +14,8 @@ var _api = require("../service/api.js");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+function _objectDestructuringEmpty(obj) { if (obj == null) throw new TypeError("Cannot destructure undefined"); }
+
 exports.default = {
   namespace: 'order',
   state: {
@@ -22,27 +24,25 @@ exports.default = {
   },
   effects: {
     getList: /*#__PURE__*/regeneratorRuntime.mark(function getList(_ref, _ref2) {
-      var payload = _ref.payload;
-      var all = _ref2.all,
-          call = _ref2.call,
+      var call = _ref2.call,
           put = _ref2.put;
 
-      var _ref3, statusCode, data, list;
+      var _ref3, data, list;
 
       return regeneratorRuntime.wrap(function getList$(_context) {
         while (1) {
           switch (_context.prev = _context.next) {
             case 0:
+              _objectDestructuringEmpty(_ref);
 
               _index2.default.showLoading({
                 title: '加载中。。。'
               });
-              _context.next = 3;
+              _context.next = 4;
               return call(_api.getOrderList);
 
-            case 3:
+            case 4:
               _ref3 = _context.sent;
-              statusCode = _ref3.statusCode;
               data = _ref3.data;
               list = data.list;
 

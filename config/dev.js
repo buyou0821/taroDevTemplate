@@ -4,11 +4,10 @@ const path = require('path');//eslint-disable-line
 
 module.exports = {
   env: {
-    NODE_ENV: '"development"'
+    NODE_ENV: '"development"',
+    SERVICECONFIG: '"mock"'
   },
   defineConstants: {
-    // 例子：domainUrl: '"http:www.xxx.com/"'
-    domainUrl: '"http://yapi.rebornauto.cn/mock/58"'
     
   },
   alias: {

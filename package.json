@@ -4,6 +4,8 @@
   "private": true,
   "description": "",
   "scripts": {
+    "build:weapp:stage": "SERVICECONFIG=stage npm run build:weapp",
+    "build:weapp:dev": "SERVICECONFIG=dev npm run build:weapp",
     "build:weapp": "taro build --type weapp",
     "build:swan": "taro build --type swan",
     "build:alipay": "taro build --type alipay",

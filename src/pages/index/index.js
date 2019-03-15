@@ -1,16 +1,16 @@
 import Taro, { Component } from '@tarojs/taro'
-import { View, Text, Button } from '@tarojs/components'
-import { AtInput, AtForm, AtButton, AtCard } from 'taro-ui'
-import { get, requestPost } from '../../services/api'
+import { View, Text } from '@tarojs/components'
+import { AtCard } from 'taro-ui'
 import {connect} from '@tarojs/redux'
-import action from '../../utils/action'
 
 import './index.scss'
 
-@connect((order) => {
-  // console.log('state',state);
+@connect(({order, loading}) => {
+  // console.log("isloading",loading);
+  const isLoading = loading.effects['order/getList'];
   return {
-    ...order,
+    order,
+    isLoading
   }
 })
 
@@ -19,21 +19,21 @@ export default class Index extends Component {
   config = {
     navigationBarTitleText: '首页'
   }
-  
 
   componentWillMount(){
-    this.props.dispatch(action("order/getList"));
+    this.props.dispatch({
+      type:"order/getList"
+    });
   }
+
  
 
   render () {
-    const {orderLists} = this.props.order;
-    
-    // console.log('##',this.props.order);
+    const {order:{orderLists=[]},isLoading} = this.props;
     
     return (
       <View className='index'>
-        <Text>Hello world!</Text>
+        <Text>{isLoading}</Text>
         {orderLists.length>0?orderLists.map((item,key) => {
           return (
               <AtCard title={item.title} key={key}>

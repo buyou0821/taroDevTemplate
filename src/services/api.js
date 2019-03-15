@@ -1,11 +1,9 @@
-import Taro from '@tarojs/taro'
-import request from './request'
+import request from '../utils/request'
 
 const defultParam={
   data: {},
   method: "GET",
-  header: {},
-  isLoading: false,
+  header: {}
 }
 
 export function get(url, param){
@@ -15,6 +13,6 @@ export function get(url, param){
 export function requestPost(url, param) { 
   param.method="POST";
   
-  let newParam=Object.assign(defultParam,param);
-  return request(url,param)
+  let newParam = Object.assign(defultParam,param);
+  return request(url,newParam)
 }

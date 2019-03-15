@@ -1,9 +1,9 @@
 import '@tarojs/async-await'
 import Taro, { Component } from '@tarojs/taro'
+import { Provider } from '@tarojs/redux'
+import store from './store'
+
 import Index from './pages/index'
-import dva from './dva'
-import models from './model'
-import { Provider } from '@tarojs/redux';
 
 import './app.scss'
 
@@ -14,11 +14,7 @@ import './app.scss'
 //   require('nerv-devtools')
 // }
 
-const dvaApp = dva.createApp({
-  initialState: {},
-  models: models
-});
-const store = dvaApp.getStore();
+
 
 class App extends Component {
 
@@ -52,5 +48,7 @@ class App extends Component {
     )
   }
 }
+
+
 
 Taro.render(<App />, document.getElementById('app'))

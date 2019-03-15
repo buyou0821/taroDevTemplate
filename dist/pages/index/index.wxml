@@ -1,0 +1,15 @@
+<block>
+    <view class="index"><text>{{isLoading}}</text>
+        <block>
+            <block wx:if="{{orderLists.length > 0}}">
+                <at-card title="{{item.title}}" __triggerObserer="{{ _triggerObserer }}" wx:key="key" wx:for="{{orderLists}}" wx:for-item="item" wx:for-index="key">
+                    <view>最高价:{{item.highestPrice}}</view>
+                    <view>最低价:{{item.minimumPrice}}</view>
+                </at-card>
+            </block>
+            <block wx:else>
+                <view>没有数据</view>
+            </block>
+        </block>
+    </view>
+</block>
